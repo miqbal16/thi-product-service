@@ -1,0 +1,558 @@
+{
+	"info": {
+		"_postman_id": "e249bd35-5cfb-4804-8c5a-d8dd387de000",
+		"name": "THI-PRODUCT-SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category_Oleholeh",
+			"item": [
+				{
+					"name": "CREATE DATA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"oleh-oleh kurma\",\r\n    \"description\": \"menjual kurma murah dan asli dari mekkah\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/api/web/category",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"web",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE DATA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"oleh-oleh\",\r\n    \"description\": \"menjual air zam-zam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/api/web/category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"web",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL DATA",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/api/mobile/paketumroh",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"mobile",
+								"paketumroh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OlehOleh_Catalog",
+			"item": [
+				{
+					"name": "POST DATA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "surban  arab",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "menjual surban dan alat sholat dengan harga yang murah",
+									"type": "text"
+								},
+								{
+									"key": "store_id",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "store_name",
+									"value": "toko budi",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/miqba/Downloads/tree-736885__480.jpg"
+								},
+								{
+									"key": "videos",
+									"value": "[www.yt1.com,www.yt2.com]",
+									"type": "text"
+								},
+								{
+									"key": "heigth",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "length",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "weigth",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "reguler_price",
+									"value": "34000",
+									"type": "text"
+								},
+								{
+									"key": "sales_price",
+									"value": "25000",
+									"type": "text"
+								},
+								{
+									"key": "sales_start_date",
+									"value": "2021-06-30",
+									"type": "text"
+								},
+								{
+									"key": "sales_end_date",
+									"value": "2021-07-08",
+									"type": "text"
+								},
+								{
+									"key": "stock_qty",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "pakaian dan surban",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/product/api/web/oleholeh/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"web",
+								"oleholeh",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/api/web/oleholeh/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"web",
+								"oleholeh",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET DATA BY SLUG",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/product/api/web/oleholeh/air-zam-zam-2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"web",
+								"oleholeh",
+								"air-zam-zam-2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE DATA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "surban",
+									"type": "text"
+								},
+								{
+									"key": "store_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "store_name",
+									"value": "toko udin",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "jual surban murah",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/miqba/Downloads/mountain.jpg",
+										"/C:/Users/miqba/Downloads/penguin.jpg"
+									]
+								},
+								{
+									"key": "heigth",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "length",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "weigth",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "reguler_price",
+									"value": "120000",
+									"type": "text"
+								},
+								{
+									"key": "sales_price",
+									"value": "80000",
+									"type": "text"
+								},
+								{
+									"key": "sales_start_date",
+									"value": "2021-06-30",
+									"type": "text"
+								},
+								{
+									"key": "sales_end_date",
+									"value": "2021-07-12",
+									"type": "text"
+								},
+								{
+									"key": "stock_qty",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "tersedia",
+									"type": "text"
+								},
+								{
+									"key": "videos",
+									"value": "www.yt1.com",
+									"type": "text"
+								},
+								{
+									"key": "videos",
+									"value": "www.yt2.com",
+									"type": "text"
+								},
+								{
+									"key": "videos",
+									"value": "www.yt3.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/product/api/web/oleholeh/surban-111",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"web",
+								"oleholeh",
+								"surban-111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/api/web/oleholeh/air-zam-zam-2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"web",
+								"oleholeh",
+								"air-zam-zam-2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaketData",
+			"item": [
+				{
+					"name": "GET ALL DATA",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "516b859c94ec8f37dccb6f23a2e4c8c29dd675d39c4e894f13",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tokohaji",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/mobile/paketdata/?no_hp=0821&page=2&perPage=100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"mobile",
+								"paketdata",
+								""
+							],
+							"query": [
+								{
+									"key": "no_hp",
+									"value": "0821"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "perPage",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET DATA WITH CODE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/mobile/paketdata/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"mobile",
+								"paketdata",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductOlehOleh_Mobile",
+			"item": [
+				{
+					"name": "GET ALL DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/api/mobile/oleholeh?title=surban&start_price=10000&end_price=20000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"api",
+								"mobile",
+								"oleholeh"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "surban"
+								},
+								{
+									"key": "category",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "start_price",
+									"value": "10000"
+								},
+								{
+									"key": "end_price",
+									"value": "20000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
